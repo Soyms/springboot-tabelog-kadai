@@ -18,7 +18,7 @@ public class AuthController {
 	    SpringApplication.run(AuthController.class, args);
 	}
 	
-	@GetMapping("/login")
+	@GetMapping("/auth/login")
 	public String login() {
 	    return "auth/login";
 	}
