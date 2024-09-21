@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+ <html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">	
+         <title>NAGOYAMESHI</title>	
+     </head>
+     
+     <body>
+	   <div class="nagoyameshi-wrapper">
+		   <div th:replace="~{fragment :: header}"></div>
+		<main> 
+ 
+         
+         <div class="d-flex align-items-center overlay-background">
+                    <div class="container nagoyameshi-container overlay-text">                    
+                        <h1 class="text-white catchphrase-heading">名古屋ならではの味を、<br>見つけよう</h1>   
+                        <p class="text-white catchphrase-paragraph">NAGOYAMESHIは、<br>名古屋市のB級グルメ専門のレビューサイトです。</p>                 
+                    </div>    
+         </div>
+         <div class="bg-light mb-4 py-4">
+        <div class="container nagoyameshi-container">
+            <h2 class="mb-3">キーワードから探す</h2>
+            <form method="GET" action="" class="user-search-box">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="店舗名・エリア・カテゴリ" name="keyword">
+                    <button type="submit" class="btn btn-primary text-white shadow-sm">検索</button> 
+                </div>               
+            </form>
+        </div>
+        </div>
+                
+     </main>           
+     
+     <footer class="bg-light">
+    <div class="d-flex justify-content-center footer-logo">
+        <a class="navbar-brand app-name" href="https://nagoyameshi-pattern-1.herokuapp.com">
+            <div class="d-flex align-items-center">
+                <img class="nagoyameshi-logo me-1" src="" alt="nagoyameshi">
+                NAGOYAMESHI
+            </div>  
+        </a>      
+    </div> 
+    <div class="d-flex justify-content-center footer-link">
+        <a href="" class="link-secondary me-3">会社概要</a>
+        <a href="" class="link-secondary">利用規約</a>
+    </div>
+    <p class="text-center text-muted small mb-0">© NAGOYAMESHI All rights reserved.</p>    
+   </footer>
+
+   </body>
+  </div>
+
+ </html>
+ 

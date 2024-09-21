@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	 <div th:replace="~{fragment :: meta}"></div>   
+              
+         <div th:replace="~{fragment :: styles}"></div>
+     
+    <title>レビュー投稿</title>       
+</head>
+<body>
+    <div class="samuraitravel-wrapper">
+          <!-- ヘッダー -->
+             <div th:replace="~{fragment :: header}"></div>
+             
+        <div class="mb-4 ">
+			<p><span th:text="${house.name}">民宿名</span>のレビュー投稿</p>
+		</div>
+  
+        <div class="card my-4">
+            <div class="card-body">
+                <form th:action="@{/submitReview}" method="post">
+                    <div class="mb-3">
+                        <label for="rating" class="form-label">評価</label>
+                        <select id="rating" name="rating" class="form-select" required>
+                            <option value="">選択してください</option>
+                            <option value="5" selected>★★★★★</option>
+                            <option value="4">★★★★</option>
+                            <option value="3">★★★</option>
+                            <option value="2">★★</option>
+                            <option value="1">★</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">コメント</label>
+                        <textarea id="comment" name="comment" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">投稿</button>
+                </form>
+            </div>
+        </div>
+        <!-- フッター -->
+             <div th:replace="~{fragment :: footer}"></div>
+    </div>
+    <div th:replace="~{fragment :: scripts}"></div>
+</body>
+</html>

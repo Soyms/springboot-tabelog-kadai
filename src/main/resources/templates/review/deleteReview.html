@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Sample</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <ul>
+    <li><a href="" class="" data-modal="modal001">モーダル001</a></li>
+    
+  </ul>
+
+  <!-- modal start -->
+  <div class="modal">
+    <div class="modal__bg" data-modal="bg"></div>
+    <div class="modal__inner" data-modal="inner">
+
+      <!-- modal001 start -->
+      <div class="modal-card" data-modal="box-modal001">
+        <div class="modal-card__close" data-modal="close">
+          <div class="modal-card__closeBtn"></div>
+        </div>
+
+        <p><span th:text="${house.name}">民宿名</span>のレビューを削除してもよろしいですか？</p>
+        
+      </div>
+      <!-- modal001 end -->
+
+    </div>
+  </div>
+  <!-- modal end -->
+  
+  <script src="deleteReview.js"></script>
+</body>
+</html>
